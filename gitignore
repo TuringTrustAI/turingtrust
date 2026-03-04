@@ -3,12 +3,14 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
-*.egg-info/
 *.egg
-dist/
 build/
 .eggs/
-
+dist/
+build/
+*.egg-info/
+*.pyc
+.env
 # Virtual environments
 .venv/
 venv/
