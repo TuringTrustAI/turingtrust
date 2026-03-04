@@ -4,15 +4,15 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "turingtrust"
-version = "1.0.0"
-description = "TuringTrust AI Governance SDK — Drop-in wrappers for LLM providers"
+version = "2.0.0"
+description = "AI governance SDK — PII detection, multi-provider gateway, quota management, BYOK + Managed key modes, and pluggable middleware for LLM operations."
 readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}
 authors = [{name = "TuringTrust", email = "sdk@turingtrust.ai"}]
-keywords = ["ai", "governance", "llm", "compliance", "security"]
+keywords = ["ai", "governance", "llm", "pii", "compliance", "security", "gateway", "openai", "anthropic", "freemium"]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
@@ -20,7 +20,10 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
 dependencies = [
     "httpx>=0.25.0",
@@ -36,6 +39,7 @@ langchain = ["langchain-core>=0.1.0"]
 dev = [
     "pytest>=7.0",
     "pytest-asyncio>=0.21",
+    "respx>=0.20",
 ]
 all = [
     "langchain-core>=0.1.0",
@@ -51,13 +55,13 @@ turingtrust-server = "turingtrust.server:main"
 Homepage = "https://turingtrust.ai"
 Documentation = "https://docs.turingtrust.ai"
 Repository = "https://github.com/turingtrust/turingtrust"
-
-[tool.setuptools]
-license-files = ["turingtrust/LICENSE"]
+Issues = "https://github.com/turingtrust/turingtrust/issues"
+Changelog = "https://github.com/turingtrust/turingtrust/blob/main/CHANGELOG.md"
+Pricing = "https://turingtrust.ai/pricing"
 
 [tool.setuptools.packages.find]
 include = ["turingtrust", "turingtrust.*"]
-exclude = ["turingtrust_backend", "turingtrust_backend.*", "turingtrust_sdk", "turingtrust_sdk.*"]
 
 [tool.pytest.ini_options]
-addopts = "--import-mode=importlib"
+testpaths = ["tests"]
+asyncio_mode = "auto"
