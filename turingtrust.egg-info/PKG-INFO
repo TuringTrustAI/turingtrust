@@ -1,14 +1,59 @@
-# TuringTrust SDK v2
+Metadata-Version: 2.4
+Name: turingtrust
+Version: 2.0.0
+Summary: AI governance SDK — PII detection, multi-provider gateway, quota management, BYOK + Managed key modes, and pluggable middleware for LLM operations.
+Author-email: TuringTrust <sdk@turingtrust.ai>
+License: MIT
+Project-URL: Homepage, https://turingtrust.ai
+Project-URL: Documentation, https://docs.turingtrust.ai
+Project-URL: Repository, https://github.com/turingtrust/turingtrust
+Project-URL: Issues, https://github.com/turingtrust/turingtrust/issues
+Project-URL: Changelog, https://github.com/turingtrust/turingtrust/blob/main/CHANGELOG.md
+Project-URL: Pricing, https://turingtrust.ai/pricing
+Keywords: ai,governance,llm,pii,compliance,security,gateway,openai,anthropic,freemium
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Security
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx>=0.25.0
+Provides-Extra: gateway
+Requires-Dist: fastapi>=0.100.0; extra == "gateway"
+Requires-Dist: uvicorn>=0.23.0; extra == "gateway"
+Requires-Dist: tiktoken>=0.5.0; extra == "gateway"
+Provides-Extra: langchain
+Requires-Dist: langchain-core>=0.1.0; extra == "langchain"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21; extra == "dev"
+Requires-Dist: respx>=0.20; extra == "dev"
+Provides-Extra: all
+Requires-Dist: langchain-core>=0.1.0; extra == "all"
+Requires-Dist: fastapi>=0.100.0; extra == "all"
+Requires-Dist: uvicorn>=0.23.0; extra == "all"
+Requires-Dist: tiktoken>=0.5.0; extra == "all"
+Dynamic: license-file
 
-*Open-source AI governance for LLM operations — BYOK & Managed modes*
+<p align="center">
+  <h1 align="center">TuringTrust SDK v2</h1>
+  <p align="center">Open-source AI governance for LLM operations — BYOK & Managed modes</p>
+</p>
 
-**turingtrust 2.0.0**
-
-[![PyPI version](https://img.shields.io/pypi/v/turingtrust)](https://pypi.org/project/turingtrust/)
-[![Python versions](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-
-
+<p align="center">
+  <a href="https://pypi.org/project/turingtrust/"><img src="https://img.shields.io/pypi/v/turingtrust?color=blue" alt="PyPI"></a>
+  <a href="https://pypi.org/project/turingtrust/"><img src="https://img.shields.io/pypi/pyversions/turingtrust" alt="Python"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="License"></a>
+</p>
 
 ---
 
