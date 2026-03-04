@@ -1,0 +1,13 @@
+include README.md
+include pyproject.toml
+include turingtrust/LICENSE
+recursive-include turingtrust *.py
+prune tests
+prune turingtrust_backend
+prune frontend
+prune alembic
+prune docs
+prune .claude
+global-exclude __pycache__
+global-exclude *.pyc
+global-exclude *.pyo
