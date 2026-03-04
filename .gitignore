@@ -7,8 +7,10 @@ __pycache__/
 build/
 .eggs/
 dist/
+dist
 build/
 *.egg-info/
+*.egg-info
 *.pyc
 .env
 # Virtual environments
